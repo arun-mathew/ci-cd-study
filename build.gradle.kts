@@ -1,5 +1,8 @@
+
 plugins {
     id("java")
+    id("jacoco")
+    id("org.sonarqube") version "4.2.1.3168"
 }
 
 group = "com.arun"
@@ -10,6 +13,10 @@ repositories {
 }
 
 dependencies {
+
+    // https://mvnrepository.com/artifact/com.amazonaws/aws-lambda-java-core
+    implementation("com.amazonaws:aws-lambda-java-core:1.2.2")
+
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }

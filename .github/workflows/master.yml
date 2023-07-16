@@ -1,0 +1,16 @@
+
+name: master
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+permissions: read-all
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
